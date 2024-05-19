@@ -1,0 +1,91 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+    padding: 0 50px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  
+  .cara_viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    translate: -50% 0;
+    width: 500%;
+    height: 500%;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+  
+  .carousel::before {
+    top: -480%;
+  }
+  
+  .carousel::after {
+    bottom: -480%;
+  }
+  
+  .cara_slide {
+    position: relative;
+    flex: 0 0 33.33%;
+    width: 33.33%;
+  }
+  
+  .cara_snap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    background-size: cover;
+    background-position: 50%;
+    border: 10px solid #ffffff;
+  }
